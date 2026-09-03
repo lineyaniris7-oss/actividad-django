@@ -25,6 +25,6 @@ circulo1 = circulo(12, 12)
 circulo1.area()
 circulo1.perimetro()
 
-cuadrado1 = cuadrado(5, 10)
+cuadrado1 = cuadrado(5, 0)
 cuadrado1.area()
 cuadrado1.perimetro()

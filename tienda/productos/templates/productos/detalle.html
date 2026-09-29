@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle</title>
+
+    <style>
+        {% include "productos/estilos.css" %}
+    </style>
+</head>
+
+<body>
+
+    <h1>Detalle</h1>
+
+    <p>
+        <strong>Nombre:</strong>
+        {{ producto.nombre }}
+    </p>
+
+    <p>
+    <strong>Categoria:</strong>
+    {{ producto.categoria }}
+    </p>
+
+    <p>
+    <strong>Precio:</strong>
+    {{ producto.precio }}
+    </p>
+
+    <p>
+    <strong>Cantidad:</strong>
+    {{ producto.cantidad }}
+    </p>
+
+    <br>
+
+    <a href="/productos/editar_productos/{{ producto.id }}/">
+    Editar
+    </a>
+
+    <br><br>
+
+    <a href="/productos/listado_productos/">
+    Volver
+    </a>
+
+</body>
+
+</html>

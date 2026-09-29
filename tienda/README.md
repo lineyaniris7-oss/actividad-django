@@ -18,3 +18,6 @@ Aplicación web desarrollada con Django para registrar y listar productos, Talle
 ## Funcionalidades
 - Registrar productos
 - Listar productos
+- Detalle productos
+- Eliminar productos
+- Editar productos

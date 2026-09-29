@@ -1,27 +1,76 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <title>Registrar producto</title>
+    <title>Producto</title>
+
+    <style>
+        {% include "productos/estilos.css" %}
+    </style>
 </head>
+
 <body>
-    <h1>Registrar producto</h1>
-    <form method="POST">
-        {% csrf_token %}
-        <label>Nombre:</label>
-        <input type="text" name="nombre" required><br>
 
-        <label>Categoría:</label>
-        <input type="text" name="categoria" required><br>
+<h1>Producto</h1>
 
-        <label>Precio:</label>
-        <input type="number" step="0.01" name="precio" required><br>
+<form method="POST">
 
-        <label>Cantidad:</label>
-        <input type="number" name="cantidad" required><br>
+    {% csrf_token %}
 
-        <button type="submit">Guardar</button>
-    </form>
-    <a href="/">Volver al listado</a>
+    <p>
+        <label>Nombre:</label><br>
+        <input
+            type="text"
+            name="nombre"
+            value="{{ producto.nombre|default:'' }}"
+            required
+        >
+    </p>
+
+    <p>
+        <label>Categoría:</label><br>
+        <input
+            type="text"
+            name="categoria"
+            value="{{ producto.categoria|default:'' }}"
+            required
+        >
+    </p>
+
+    <p>
+        <label>Precio:</label><br>
+        <input
+            type="number"
+            step="0.01"
+            name="precio"
+            value="{{ producto.precio|stringformat:'s' }}"
+            required
+        >
+    </p>
+
+    <p>
+        <label>Cantidad:</label><br>
+        <input
+            type="number"
+            name="cantidad"
+            value="{{ producto.cantidad|default:'' }}"
+            required
+        >
+    </p>
+
+    <button type="submit">
+        Guardar
+    </button>
+
+</form>
+
+<br>
+
+<a href="/productos/listado_productos/">
+    Ver productos
+</a>
+
 </body>
+
 </html>

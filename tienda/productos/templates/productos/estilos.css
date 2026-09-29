@@ -1,0 +1,159 @@
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #f4f6f8;
+    color: #2b2f33;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #24466b;
+    margin: 0 0 24px;
+    padding-left: 14px;
+    border-left: 6px solid #f2b632;
+}
+
+a {
+    color: #24466b;
+    text-underline-offset: 3px;
+}
+
+a:hover {
+    color: #a8760a;
+}
+
+h1 + a {
+    display: inline-block;
+    background-color: #f2b632;
+    color: #2b2f33;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+h1 + a:hover {
+    background-color: #dba21f;
+    color: #2b2f33;
+}
+
+table {
+    width: 100%;
+    margin-top: 24px;
+    border-collapse: collapse;
+    background-color: white;
+    border: 1px solid #d5dbe1;
+}
+
+th {
+    background-color: #24466b;
+    color: white;
+    font-weight: 600;
+    text-align: left;
+    padding: 10px 12px;
+    border: none;
+}
+
+td {
+    padding: 10px 12px;
+    border: none;
+    border-bottom: 1px solid #e3e7eb;
+}
+
+tr:hover td {
+    background-color: #fff6de;
+}
+
+td form {
+    margin: 0;
+}
+
+button {
+    font-family: inherit;
+    font-size: 15px;
+    background-color: #24466b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 9px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #17304a;
+}
+
+td form button {
+    background-color: #b8402f;
+    padding: 4px 12px;
+    font-size: 14px;
+}
+
+td form button:hover {
+    background-color: #8f2f21;
+}
+
+body > form {
+    background-color: white;
+    border: 1px solid #d5dbe1;
+    border-radius: 6px;
+    padding: 10px 24px 24px;
+    max-width: 380px;
+}
+
+label {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+input {
+    font-family: inherit;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 4px;
+    padding: 8px 10px;
+    border: 1px solid #aeb7c0;
+    border-radius: 4px;
+}
+
+input:focus {
+    outline: 2px solid #f2b632;
+    border-color: #24466b;
+}
+
+body > p {
+    padding: 8px 0;
+    margin: 0;
+    max-width: 380px;
+    border-bottom: 1px dotted #aeb7c0;
+}
+
+body > p strong {
+    display: inline-block;
+    width: 110px;
+    color: #24466b;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 24px 12px 40px;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px 6px;
+    }
+}

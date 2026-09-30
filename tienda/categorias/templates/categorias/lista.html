@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Listado de categorias</title>
+    <style>
+       {% include "categorias/estilos.css" %}
+    </style>
+</head>
+<body>
+    <h1>Sistema de categorias</h1>
+    <a href="/categorias/">Registrar categoria</a>
+    <br><br>
+    <a href="/productos/listado_productos/" >Ver productos</a>
+
+    {% if categorias %}
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Observaciones</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+                <th>Detalle</th>
+            </tr>
+            {% for categoria in categorias %}
+                <tr>
+                    <td>{{ categoria.id }}</td>
+                    <td>{{ categoria.nombre }}</td>
+                    <td>{{ categoria.observaciones }}</td>
+                    <td><a href="/categorias/editar_categorias/{{ categoria.id }}/">Editar</a></td>
+                    <td>
+                        <form method="post" action="/categorias/eliminar_categorias/{{ categoria.id }}/">
+                            {% csrf_token %}
+                            <button type="submit" onclick="return confirm('¿Eliminar esta categoria?')">Eliminar</button>
+                        </form>
+                    </td>
+                    <td><a href="/categorias/detalle_categorias/{{ categoria.id }}/">Ver</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>Todavía no hay categorias registradas.</p>
+    {% endif %}
+</body>
+</html>

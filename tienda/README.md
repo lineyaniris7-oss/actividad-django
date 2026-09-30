@@ -1,6 +1,6 @@
 # Sistema de productos
 
-Aplicación web desarrollada con Django para registrar y listar productos, Taller 1 SENA.
+Aplicación web desarrollada con Django para registrar, eliminar, editar, detallar y listar productos, y registrar, eliminar, editar, detallar y listar categorias, Taller 1 SENA.
 
 ## Tecnologías
 - Python
@@ -21,3 +21,8 @@ Aplicación web desarrollada con Django para registrar y listar productos, Talle
 - Detalle productos
 - Eliminar productos
 - Editar productos
+- Registrar categorias
+- Listar categorias
+- Detalle categorias
+- Eliminar categorias
+- Editar categorias

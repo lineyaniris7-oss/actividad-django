@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Categoria</title>
+    <style>
+       {% include "categorias/estilos.css" %}
+    </style>
+</head>
+
+<body>
+
+<h1>Categoria</h1>
+
+<form method="POST">
+
+    {% csrf_token %}
+
+    <p>
+        <label>Nombre:</label><br>
+        <input
+            type="text"
+            name="nombre"
+            value="{{ categoria.nombre|default:'' }}"
+            required
+        >
+    </p>
+
+    <p>
+        <label>Observaciones:</label><br>
+        <input
+            type="text"
+            name="observaciones"
+            value="{{ categoria.observaciones|default:'' }}"
+            required
+        >
+    </p>
+
+    <button type="submit">
+        Guardar
+    </button>
+
+</form>
+
+<br>
+
+<a href="/categorias/lista_categorias/">
+    Ver categorias
+</a>
+
+</body>
+
+</html>

@@ -34,6 +34,11 @@
     {{ producto.cantidad }}
     </p>
 
+    <p>
+    <strong>Estado:</strong>
+    {{ producto.estado|yesno:"Activo,Inactivo" }}
+    </p>
+
     <br>
 
     <a href="/productos/editar_productos/{{ producto.id }}/">

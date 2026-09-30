@@ -109,7 +109,7 @@ label {
     font-size: 14px;
 }
 
-input, select {
+input {
     font-family: inherit;
     font-size: 16px;
     width: 100%;
@@ -118,10 +118,9 @@ input, select {
     padding: 8px 10px;
     border: 1px solid #aeb7c0;
     border-radius: 4px;
-    background-color: white;
 }
 
-input:focus, select:focus {
+input:focus {
     outline: 2px solid #f2b632;
     border-color: #24466b;
 }
@@ -156,3 +155,18 @@ body > p strong {
         padding: 8px 6px;
     }
 }
+
+td:first-child {
+    width: 40px;
+    color: #6a7580;
+    text-align: center;
+}
+
+th:first-child {
+    text-align: center;
+}
+
+td:nth-child(3) {
+    max-width: 280px;
+}
+

@@ -38,6 +38,7 @@ def editar_productos(request, id):
         producto.categoria = request.POST["categoria"]
         producto.precio = request.POST["precio"]
         producto.cantidad = request.POST["cantidad"]
+        producto.estado = request.POST.get("estado") == "True"
 
         producto.save()
 
